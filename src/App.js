@@ -6,6 +6,7 @@ import {BrowserRouter as Router, Route, Link } from 'react-router-dom';
 //pages
 import Home from './components/Pages/Home';
 import About from './components/Pages/About';
+import Contact from './components/Pages/Contact';
 
 
 class App extends React.Component{
@@ -23,6 +24,11 @@ class App extends React.Component{
           <Route 
           path="/about"
           component={About}
+          />
+
+          <Route
+          path="/contact"
+          component= {Contact}
           />
 
 
