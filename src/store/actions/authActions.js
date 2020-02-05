@@ -1,7 +1,19 @@
+import API from '../../utils/api';
+
+
 export const login = (email, pass) => {
-    return {
-        type: 'LOGIN',
-        payload: {email, pass}
+    return (dispatch) => {
+        API.login(email, pass, res => {
+            dispatch ({
+                type: 'LOGIN',
+                payload:  {
+                    email: email,
+                    token: res.data.id,
+                    userId: res.data.userId
+                }
+            })
+        })
+        
     }
 }
 
